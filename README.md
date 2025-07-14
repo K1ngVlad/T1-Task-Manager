@@ -41,7 +41,7 @@ https://t1-task-manager-oj0eqbn8p-k1ngvlads-projects.vercel.app/
 ## Демонстрация функционала
 Видео с демонстрацией - https://drive.google.com/file/d/11zptoKz40-dIAf-p8NGhnFBDylS8lhqG/view?usp=sharing
 
-##Рекомендации по дальнейшему улучшению:
+## Рекомендации по дальнейшему улучшению:
 
 - Использование единой системы стилей (на данный момент scss модули используются только в паре мест);
 
