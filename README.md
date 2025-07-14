@@ -1,69 +1,50 @@
-# React + TypeScript + Vite
+# Проект "Менеджер задача" для Т1 лагеря.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Используемый стэк (выбран согласно ТЗ + дополнительные технологии):
 
-Currently, two official plugins are available:
+TypeScript
+React
+React Router
+Vite
+Material UI
+sass/scss
+dnd-kit
+uuid
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Запуск
 
-## Expanding the ESLint configuration
+Для запуска требуется установить Nodejs
+Актуальную версию можно скачать на сайте - https://nodejs.org/en/download
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Перед запуском устанавливаются необходимые зависимости с помощью соответствующего пакетного менеджера:
+npm install (npm устанавливается вместе с NodeJs)
+или
+yarn install
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Запуск проекта в режиме разработки:
+npm run dev
+или
+yarn dev
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## Просмотр
+Также приложение развернуто на:
+https://t1-task-manager-oj0eqbn8p-k1ngvlads-projects.vercel.app/
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Демонстрация функционала
+Видео с демонстрацией - https://drive.google.com/file/d/11zptoKz40-dIAf-p8NGhnFBDylS8lhqG/view?usp=sharing
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+##Рекомендации по дальнейшему улучшению:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- Использование единой системы стилей (на данный момент scss модули используются только в паре мест);
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- Разбъение компонентов на более мелкие;
+
+- Улучшение доступности верстки;
+
+- Улучшение визуальной составляющей;
+
+- Оптимизация структуры данных (например, в массиве можно хранить только id, а объекты в коллекции Map);
+
+- Замена контекста на стейт менеджер;
+
+- Проработка архитектуры (разделение представления и бизнес логики);
